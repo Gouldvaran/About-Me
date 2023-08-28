@@ -4,14 +4,14 @@
     <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varan</title>
+    <title>Varan - Homepage</title>
 
     <!-- Style -->
     <link rel="icon" href="Images/Mobius Logo V1.png">
     <link rel="stylesheet" href="CSS/Main.css">
 
     <!-- Scripts -->
-    <script src="../Javascripts/Script Varan.js" rel="script" type="Javascript"></script>
+    <script src="JavaScripts/Script Varan.js"></script>
 
 </head>
 <body>
@@ -25,17 +25,24 @@
         -->
     </div>
     <div>
-        <h3>About Me:</h3>
+        <h3 class="h3Style">About Me:</h3>
     </div>
     <div>
-        <p>I am who I am. If you wish, I could show you my hobby. All you have to do, is to <ins onclick="">click me.</ins></p>
-        <p>Maybe you want to hear what kind of songs/tracks I prefer? In that case: <ins>press me.</ins></p>
+        <p>I am who I am. If you wish, I could show you my hobby. All you have to do, is to <ins onclick="toggleSecret('musicVideos')">click me.</ins></p>
+        <p>Maybe you want to hear what kind of songs/tracks I prefer? In that case: <ins onclick="toggleSecret('youtubeContainer')">press me.</ins></p>
     </div>
-    <div id="secretA" class="noDisplay">
-        <video><source></video>
+    <div id="musicVideos" class="noDisplay">
+        <h3 class="h3Style">Not added yet.</h3>
+        <!--
+            <video><source></video>
+        -->
     </div>
-    <div id="secretB" class="noDisplay">
-        <iframe></iframe>
+    <div id="youtubeContainer" class="noDisplay">
+        <h3 id="youtubeVidTitle" class="h3Style shadowH3">deadmau5 - Heart Has Teeth (feat. Skylar Grey)</h3>
+        <div id="youtubeVidContainer">
+            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/EvkCcbd7oJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <button id="uniqueButton" onclick="changeYoutubeVideo()">New Random Video</button>
     </div>
 </body>
 </html>
