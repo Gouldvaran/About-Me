@@ -1,5 +1,7 @@
 //Start
 
+let theNumber = 0;
+
 let youtubeEmbed = "https://www.youtube.com/embed/";
 
 const youtubeLinks = [
@@ -34,6 +36,20 @@ function getRandomNumber(min, max) {
 
 function toggleSecret(id){
     document.getElementById(id).classList.toggle("noDisplay");
+}
+
+function switchVideo(){
+    let videoContainer = document.getElementById("videoContainer");
+    let videoTitle = document.getElementById("vidTitle");
+    if (theNumber === 0){
+        videoTitle.innerText= "Varan - ID (Not released)";
+        videoContainer.innerHTML = '<video id="videoPlayer" controls><source src="Videos/Example 2.mp4" type="video/mp4"></video>';
+        theNumber++;
+    }else if(theNumber === 1){
+        videoTitle.innerText= "Varan - Malfunction";
+        videoContainer.innerHTML = '<video id="videoPlayer" controls><source src="Videos/Example 1.mp4" type="video/mp4"></video>';
+        theNumber--;
+    }
 }
 
 function changeYoutubeVideo(){

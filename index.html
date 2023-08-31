@@ -12,7 +12,6 @@
 
     <!-- Scripts -->
     <script src="JavaScripts/Script Varan.js"></script>
-
 </head>
 <body>
     <div>
@@ -27,22 +26,25 @@
     <div>
         <h3 class="h3Style">About Me:</h3>
     </div>
-    <div>
-        <p>I am who I am. If you wish, I could show you my hobby. All you have to do, is to <ins onclick="toggleSecret('musicVideos')">click me.</ins></p>
-        <p>Maybe you want to hear what kind of songs/tracks I prefer? In that case: <ins onclick="toggleSecret('youtubeContainer')">press me.</ins></p>
-    </div>
+    <p>
+        I am usually referred as "Gould" or "Varan". Any of them works just fine.<br>
+        My hobbies are pretty much as typical as it can be. Games, programming and music.<br>
+        If you want to hear some of my music, consider <ins onclick="toggleSecret('musicVideos')">clicking me.</ins>
+    </p>
     <div id="musicVideos" class="noDisplay">
-        <h3 class="h3Style">Not added yet.</h3>
-        <!--
-            <video><source></video>
-        -->
+        <h3 id="vidTitle" class="h3Style shadowH3">Varan - Malfunction</h3>
+        <div id="videoContainer">
+            <video id="videoPlayer" controls><source src="Videos/Example 1.mp4" type="video/mp4"></video>
+        </div>
+        <button class="uniqueButton" onclick="switchVideo()">Switch Video</button>
     </div>
+    <p>Maybe you want to hear what kind of songs/tracks I prefer? In that case: <ins onclick="toggleSecret('youtubeContainer')">press me.</ins></p>
     <div id="youtubeContainer" class="noDisplay">
         <h3 id="youtubeVidTitle" class="h3Style shadowH3">deadmau5 - Heart Has Teeth (feat. Skylar Grey)</h3>
         <div id="youtubeVidContainer">
             <iframe id="youtubeVideo" src="https://www.youtube.com/embed/EvkCcbd7oJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <button id="uniqueButton" onclick="changeYoutubeVideo()">New Random Video</button>
+        <button class="uniqueButton" onclick="changeYoutubeVideo()">New Random Video</button>
     </div>
 </body>
 </html>
